@@ -1,16 +1,17 @@
 #Facil
-# distancia = int(input("distancia a la luna (km): "))
-# velocidad = int(input("velocidad del cohete (km/h): "))
+distancia = int(input("distancia a la luna (km): "))
+velocidad = int(input("velocidad del cohete (km/h): "))
 
-# print(f"el cohete va a tardar: {distancia/velocidad} horas")
+print(f"el cohete va a tardar: {distancia/velocidad} horas")
 
-
+###########################################################
 #Intermedio
-# base = int(input("Digite la base de la superficie (m): "))
-# altura = int(input("Digite la altura de la superficie (m): "))
+base = int(input("Digite la base de la superficie (m): "))
+altura = int(input("Digite la altura de la superficie (m): "))
 
-# print(f"El area para la base de operaciones es de: {base*altura}m²")
+print(f"El area para la base de operaciones es de: {base*altura}m²")
 
+###########################################################
 #Dificil
 import math
 
