@@ -24,7 +24,7 @@ import random
 preguntas = [
     {"pregunta": "¿El hombre llego a la luna?", "res":"si"},
     {"pregunta": "¿Existen los pejelagartos?", "res":"no"},
-    {"pregunta": "¿las pulgas muerden?", "res":"si"}
+    {"pregunta": "¿las pulgas muerden?", "res":"si"} 
 ]
 
 
