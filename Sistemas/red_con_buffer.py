@@ -1,9 +1,11 @@
 import time
+import random
 
 class Node:
     def __init__(self, tipo = "cliente", nombre="Annonimous"):
         self.tipo = tipo
         self.conecciones = []
+        self.buffer = []
         self.nombre = nombre
 
     def agregar_conexion(self, host, primeraConexion = True):
@@ -14,6 +16,7 @@ class Node:
 
     def enviar_mensaje(self, msg):
         for host in self.conecciones:
+            
             host.recibir_mensaje(msg, self.nombre, self.tipo)
     
     def recibir_mensaje(self, msg, nombre, tipo):
@@ -24,6 +27,9 @@ class Node:
             host.eliminar_conexion(self, False)
             print(f"Se ha perdido la coneccion con {host.nombre}")
         self.conecciones.remove(host)
+
+    def procesar_buffer(self):
+        pass
         
             
 
