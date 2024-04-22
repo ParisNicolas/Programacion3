@@ -20,3 +20,6 @@ El menu pide primero el numero del jugador (expepto para la opc. N°1).
 5) Avisa si el jugador es goleador en caso que halla realizado mas de 20 goles
 6) Agrega un premio al jugador simplemente pusheando a una lista
 7) Elimina un premio buscandolo en la lista de premios de ese jugador
+
+**Creator:**
+Paris Nicolas
