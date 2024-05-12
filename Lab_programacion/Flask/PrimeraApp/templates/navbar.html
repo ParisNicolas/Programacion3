@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="shortcut icon" href="static/planning_calendar_icon_262702.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="static/css/home.css">
+</head>
+<body>
+    <header>
+        <h1>Pagina <p style="color: rgb(41, 182, 135); display:inline">404</p>!</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li> 
+                <li><a href="{{ url_for('contact') }}">Contacto</a></li>
+                <li><a href="{{ url_for('curiosities') }}">Curiosidades</a></li>
+                <li><a href="{{ url_for('info') }}">Información Flask</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock%}
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; Esta pagina tiene derechos de autor de <span title="Paris"><em>Francisco</em></span>.</p>
+        </div>
+    </footer>
+</body>
+</html>
