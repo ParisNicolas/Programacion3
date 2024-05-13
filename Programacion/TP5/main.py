@@ -1,4 +1,4 @@
-#Divicion por cero 
+#DIVICION POR CERO 
 def ej1():
     print("Divicion de numeros:")
     n1 = int(input("Digite numero 1: "))
@@ -13,6 +13,8 @@ def ej1():
         print()
 
 
+
+#TIPO DE DATO INCORRECTO
 def ej2():
     #Conversión de Tipo de Datos
     try:
@@ -24,6 +26,8 @@ def ej2():
         print("Por favor ingresa un numero valido")
 
 
+
+#ACCESO A UN ÍNDICE FUERA DE RANGO
 def ej3():
     #Acceso a un Índice Fuera de Rango
     lista = []
@@ -34,6 +38,8 @@ def ej3():
         print(f"El elemento en la posicion {index} no existe")
         print("Vuelve a intentarlo")
 
+
+#OPERACIONES CON TIPO DE DATO INCORRECTO
 def ej4():
     def potencia(n, exp):
         try:
