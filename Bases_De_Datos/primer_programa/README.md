@@ -6,9 +6,12 @@
 
 ### Instalacion
 1. Ejecuta el siguiente comando:
-	`$ pip install mysql-connector-python dotenv-python`
 
-2. Crea un archivo *.env*  en la misma carpeta con la siguiente informacion:
+```shell
+$ pip install mysql-connector-python dotenv-python
+```
+
+3. Crea un archivo *.env*  en la misma carpeta con la siguiente informacion:
 ```text
 HOST="url de la base de datos..."
 USER="usuario..."
@@ -19,11 +22,11 @@ DB="nombre de la base de datos..."
 ### Explicación
 Basicamente el codigo se conecta mediante python a una base de datos MySQL de CleverCloud y muestra una simple implemetacion de consultas INSERT, DELETE, SELECT:
 
-- Primero inserta un registro en la entidad *clientes*
-`INSERT INTO clientes (id, nombre, apellido, email) VALUES (%s, %s, %s, %s)`
-- Luego elimina un fila de esta misma tabla, filtrado por el nombre a eleccion del usuario
-`DELETE FROM clientes WHERE nombre = "{nombre}"`
-- Por ultimo extrae todas las filas de la entidad *clientes*
+- Primero inserta un registro en la entidad *clientes*:
+  `INSERT INTO clientes (id, nombre, apellido, email) VALUES (%s, %s, %s, %s)`
+- Luego elimina un fila de esta misma tabla, filtrado por el nombre a eleccion del usuario:
+  `DELETE FROM clientes WHERE nombre = "{nombre}"`
+- Por ultimo extrae todas las filas de la entidad *clientes*:
 `SELECT * FROM clientes`
 
 El ciclo del programa se podria definir asi:
