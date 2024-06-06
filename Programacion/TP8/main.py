@@ -35,7 +35,7 @@ while True:
         else:
             results_list = np.random.randint(0, 6, size=(5, 3))
         
-        results_df = pd.dataframe(results_list, columns=result_columns)
+        results_df = pd.DataFrame(results_list, columns=result_columns)
     
     
     elif option == "2":
