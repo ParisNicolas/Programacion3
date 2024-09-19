@@ -8,9 +8,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `user` (
   `id` smallint(3) UNSIGNED NOT NULL,
-  `username` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `password` char(255) COLLATE utf8_unicode_ci NOT NULL,
-  `fullname` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` char(100) COLLATE utf8_unicode_ci NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Stores the user''s data.';
 
 
@@ -50,12 +49,12 @@ COMMIT;
 
 CREATE DATABASE flask_login
 
-use flask_login
+use login
 
 
 
-INSERT INTO `user` (`id`, `username`, `password`, `fullname`) VALUES
-(1, 'Cbarrios', 'scrypt:32768:8:1$cRB1lf4cCg2AMVtV$e93a4f6cc4b1760e0b88c7a30fa24936ef5e7ed16a1275122579c8ae4f84dd523fb048f66b459a0e0c861d7ebb78e3e26308e16ee0d0ed170607f052a10ebc91', 'Christian Barrios');
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'messi', 'scrypt:32768:8:1$ezQS4hAoEou6miZC$f7a3df1b4652ea046946bd8034c02b607a3a84fb86e6686f8e2cd27d70728f29022ab65fc36a7c1cf68dcea4ea6d906484553d27f7bbfa6fe87d01e25c0b7176');
 
 
 

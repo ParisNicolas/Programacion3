@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block body %}
-<form class="form-signin" action="/login" method="POST">
+<form method="POST" class="form-signin">
     <img class="mb-4" src="{{ url_for('static', filename='img/logoITR.png') }}" alt="" width="100" height="60">
     {% with messages = get_flashed_messages() %}
 
@@ -22,16 +22,27 @@
     {% endif %}
 
     {% endwith %}
+
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    {{ form.hidden_tag() }}
+    
     <div class="form-floating">
-        <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-        <label for="username">Username</label>
+        {{ form.username.label }}<br>
+        {{ form.username(class="form-control", placeholder="Username") }}<br>
+        {% for error in form.username.errors %}
+            <span style="color: red;">{{ error }}</span>
+        {% endfor %}
     </div>
-    <div class="form-floating mt-2">
-        <input type="password" class="form-control" name="password" placeholder="Password">
-        <label for="password">Password</label>
+    
+    <div class="form-floating">
+        {{ form.password.label(class="form-label") }}<br>
+        {{ form.password(class="form-control", placeholder="Password") }}<br>
+        {% for error in form.password.errors %}
+            <span style="color: red;">{{ error }}</span>
+        {% endfor %}
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+
+    {{ form.submit(class="w-100 btn btn-lg btn-primary") }}
 </form>
 {% endblock %}
